@@ -49,8 +49,10 @@
      <Compile Include="Assets\Game\MyTake\Scripts\Camera\MouseOrbit.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\Boom.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\Cannon Shoot.js" />
+     <Compile Include="Assets\Game\MyTake\Scripts\raketa\DamageReceiver.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\Explosion-Simple.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\PlayerWeapons.js" />
+     <Compile Include="Assets\Game\MyTake\Scripts\raketa\Rocket.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\RocketLauncher.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\izcheznovenie.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\tank\Cannon Movement.js" />
