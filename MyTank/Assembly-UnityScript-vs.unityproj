@@ -55,6 +55,7 @@
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\Rocket.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\RocketLauncher.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\raketa\izcheznovenie.js" />
+     <Compile Include="Assets\Game\MyTake\Scripts\robot\SentryGun.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\tank\Cannon Movement.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\tank\Tank Movement.js" />
      <Compile Include="Assets\Game\MyTake\Scripts\tank\Turret Movement.js" />

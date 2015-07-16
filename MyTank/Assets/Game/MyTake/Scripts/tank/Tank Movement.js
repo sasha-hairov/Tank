@@ -102,10 +102,10 @@ function Accelerate(Direccion : String){
 // Tank Control Function: Stop
 function Stop(){
 	if(currentVel > 0){
-		currentVel += deceleration * 1 * Time.deltaTime;
+		currentVel += deceleration * 2 * Time.deltaTime;
 	}
 	else{
-		currentVel += acceleration * 1 * Time.deltaTime;
+		currentVel += acceleration * 2 * Time.deltaTime;
 	}
 	return currentVel;
 }

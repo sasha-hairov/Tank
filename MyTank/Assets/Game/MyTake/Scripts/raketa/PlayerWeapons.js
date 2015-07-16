@@ -9,7 +9,7 @@ SelectWeapon(0);
 function Update()
 {
 	
-	if (Input.GetButton ("Fire1")) 
+	if (Input.GetButton ("Jump")) 
 	BroadcastMessage("Fire");
 	if (Input.GetKeyDown("1"))
 	{
