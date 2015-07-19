@@ -1,3 +1,5 @@
+//Hairov Alexander (c) 2015
+
 var hitPoints = 100.0;
 var detonationDelay = 0.0;
 var explosion : Transform;
@@ -10,12 +12,15 @@ function ApplyDamage (damage : float) {
 		
 	hitPoints -= damage;
 	if (hitPoints <= 0.0) {
+	
 		
 		var emitter : ParticleEmitter = GetComponentInChildren(ParticleEmitter);
 		if (emitter)
 			emitter.emit = true;
 
 		Invoke("DelayedDetonate", detonationDelay);
+		
+		
 	}
 }
 
@@ -44,6 +49,10 @@ function Detonate () {
 	if (emitter) {
 		emitter.emit = false;
 		emitter.transform.parent = null;
+		
+		
+
 	}
+	
 }
 

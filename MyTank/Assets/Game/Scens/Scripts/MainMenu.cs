@@ -57,8 +57,8 @@ public class MainMenu : MonoBehaviour
             // отрисовка кнопки Start и обработка ее нажатия
             if (GUILayout.Button(startButtonText, buttonStyle, GUILayout.MinHeight(buttonMinHeight)))
             {
-                // загрузка сцены с именем Level
-                Application.LoadLevel("Level");
+                // загрузка сцены с именем Leve0
+                Application.LoadLevel("Level0");
             }
 
             GUILayout.FlexibleSpace(); // динамическоем пространство между кнопками

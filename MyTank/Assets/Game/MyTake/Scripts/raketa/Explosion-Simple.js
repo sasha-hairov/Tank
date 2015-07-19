@@ -1,3 +1,5 @@
+//Hairov Alexander (c) 2015
+
 var explosionRadius = 5.0;
 var explosionPower = 10.0;
 var explosionDamage = 100.0;

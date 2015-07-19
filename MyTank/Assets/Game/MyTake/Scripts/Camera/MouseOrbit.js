@@ -1,3 +1,4 @@
+//Hairov Alexander (c) 2015
 var target : Transform;
 var distance = 10.0;
 

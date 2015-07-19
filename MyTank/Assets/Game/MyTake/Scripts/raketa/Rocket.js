@@ -1,4 +1,4 @@
-
+//Hairov Alexander (c) 2015
 var explosion : GameObject;
 var timeOut = 3.0;
 

@@ -1,10 +1,12 @@
-var acceleration : float = 3; //Acceleration factor
-var deceleration : float = -3; //Deceleration factor
-var currentVel : float = 0; //Current Velocity
-var maxVel : float = 5; //Maxim Velocity
-var maxVelReverse : float = -3; //Maxim Reverse Velocity
-var rotationVel : float = 40; //Rotation Speed
-var currentRotation : float = 0; //Current Rotation
+//Hairov Alexander (c) 2015
+
+var acceleration : float = 3; 
+var deceleration : float = -3; 
+var currentVel : float = 0; 
+var maxVel : float = 5; 
+var maxVelReverse : float = -3; 
+var rotationVel : float = 40; 
+var currentRotation : float = 0; 
 
 var wheelFrontLeft : Transform;
 var wheelFrontRight : Transform;
@@ -36,17 +38,17 @@ function rotateRightOruga(speed : float){
 
 function Update () {
 
-	//Play the motor sound at the correct Pitch
+	
 	GetComponent.<AudioSource>().pitch = Mathf.Abs(currentVel / maxVel) + 1 ;
 
-	//Move the Tank at the Current Velocity
+	
 	transform.Translate(Vector3(0,0,currentVel * Time.deltaTime));
 	
-	//Wheels Animations at the Current Velocity
+	
 	rotateLeftOruga(currentVel);
 	rotateRightOruga(currentVel);
 	
-	//Go Forward
+	
 	if(Input.GetAxis("Vertical") > 0 || tankGo > 0){
 		if(currentVel < 0){
 			Stop();
@@ -59,7 +61,7 @@ function Update () {
 		}
 	}
 		
-	//Go Backward
+
 	if(Input.GetAxis("Vertical") < 0 || tankGo < 0){
 		if(currentVel > 0){
 			Stop();
@@ -72,7 +74,7 @@ function Update () {
 		}
 	}
 		
-	//Go to the Left
+	
 	if(Input.GetAxisRaw("Horizontal") < 0 || tankRotate < 0){
 		rotateLeftOruga(-currentVel - 1);
 		rotateRightOruga(currentVel + 1);
@@ -80,7 +82,7 @@ function Update () {
 		transform.Rotate(Vector3(0,currentRotation * Time.deltaTime,0));
 	}
 		
-	//Go to the Right
+	
 	if(Input.GetAxisRaw("Horizontal") > 0 || tankRotate > 0){
 		rotateLeftOruga(currentVel + 1);
 		rotateRightOruga(-currentVel - 1);
@@ -89,7 +91,7 @@ function Update () {
 	}
 }
 
-// Tank Control Function: Accelerate
+
 function Accelerate(Direccion : String){
 	if(Direccion == "forward"){
 		currentVel += acceleration * Time.deltaTime;
@@ -99,7 +101,7 @@ function Accelerate(Direccion : String){
 	}
 	return currentVel;
 }
-// Tank Control Function: Stop
+
 function Stop(){
 	if(currentVel > 0){
 		currentVel += deceleration * 2 * Time.deltaTime;
@@ -109,7 +111,7 @@ function Stop(){
 	}
 	return currentVel;
 }
-// Tank Control Function: Spin
+
 function Spin(Direccion : String){
 	if(Direccion == "left"){
 		currentRotation = -rotationVel -currentVel;

@@ -1,5 +1,7 @@
-var attackRange = 30.0;
-var shootAngleDistance = 10.0;
+//Hairov Alexander (c) 2015
+
+var attackRange = 100.0;
+var shootAngleDistance = 100.0;
 var target : Transform;
 
 function Start () {
@@ -14,12 +16,12 @@ function Update () {
 	if (!CanSeeTarget ())
 		return;
 	
-	// Rotate towards target	
+		
 	var targetPoint = target.position;
 	var targetRotation = Quaternion.LookRotation (targetPoint - transform.position, Vector3.up);
 	transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 2.0);
 
-	// If we are almost rotated towards target - fire one clip of ammo
+	
 	var forward = transform.TransformDirection(Vector3.forward);
 	var targetDir = target.position - transform.position;
 	if (Vector3.Angle(forward, targetDir) < shootAngleDistance)

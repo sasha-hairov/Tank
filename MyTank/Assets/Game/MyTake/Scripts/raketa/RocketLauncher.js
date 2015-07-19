@@ -1,4 +1,6 @@
-﻿var projectile : Rigidbody; 
+﻿
+//Hairov Alexander (c) 2015
+var projectile : Rigidbody; 
 var initialSpeed = 20.0; 
 var reloadTime = 0.5; 
 var ammoCount = 20; 

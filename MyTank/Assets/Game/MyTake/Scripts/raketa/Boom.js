@@ -1,4 +1,5 @@
-﻿var explosion : GameObject; 
+﻿//Hairov Alexander (c) 2015
+var explosion : GameObject; 
 
 function OnCollisionEnter( collision : Collision )
 {

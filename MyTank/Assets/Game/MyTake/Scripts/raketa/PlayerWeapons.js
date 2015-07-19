@@ -1,4 +1,5 @@
-﻿var projectile : Rigidbody; 
+﻿//Hairov Alexander (c) 2015
+var projectile : Rigidbody; 
 var speed = 20; 
 
 function Awake() 
